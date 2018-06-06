@@ -1,8 +1,9 @@
 # SQL generally used commands
-### Install	--> [link](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial)
-### MySQL startup   --> `mysql -u root -p`
-### Interview questions --> [link](https://www.toptal.com/sql/interview-questions)
-### Create & Delete db
+#### Install	-->	[link](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial)
+#### MySQL startup   -->	`mysql -u root -p`
+#### Interview questions -->	[link](https://www.toptal.com/sql/interview-questions)
+#### Useful Cheatsheet	-->	[link](https://github.com/treehouse/cheatsheets)
+#### Create & Delete db
 Check available dbs
 ```
 SHOW DATABASES;
@@ -23,7 +24,7 @@ See overview of the tables
 ```
 SHOW tables;
 ```
-### db queries
+#### db queries
 _SELECT_ is used to select data from a db. The result is stored in a result-set.
 ```
 SELECT * FROM table;
