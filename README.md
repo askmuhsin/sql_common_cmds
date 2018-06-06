@@ -1,7 +1,7 @@
 # SQL generally used commands
-### Install	-->
-### MySQL startup   -->
-### Interview questions -->
+### Install	--> [link](https://www.digitalocean.com/community/tutorials/a-basic-mysql-tutorial)
+### MySQL startup   --> `mysql -u root -p`
+### Interview questions --> [link](https://www.toptal.com/sql/interview-questions)
 ### Create & Delete db
 Check available dbs
 ```
@@ -24,6 +24,21 @@ See overview of the tables
 SHOW tables;
 ```
 ### db queries
+_SELECT_ is used to select data from a db. The result is stored in a result-set.
 ```
 SELECT * FROM table;
+SELECT DISTINCT col_1, col_2 FROM table;
+SELECT COUNT (col_name) FROM table;
+SELECT * FROM table WHERE col_name='value';
+SELECT * FROM table ORDER BY col_1 ASC, col_2 DESC;
 ```
+
+_INSERT INTO_ statement is used to insert new **records** in a **table**.
+```
+INSERT INTO table_name (col_1, col_2, col_3) VALUES (val_1, val_2, val_3);
+```
+Inserting without specifying column name (make sure values are in same order).
+```
+INSERT INTO table_name VALUES (val_1, val_2, val_3, ...);
+```
+
