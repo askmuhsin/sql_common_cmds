@@ -42,3 +42,11 @@ Inserting without specifying column name (make sure values are in same order).
 INSERT INTO table_name VALUES (val_1, val_2, val_3, ...);
 ```
 
+Combine _AND, OR and NOT_ with _WHERE_.
+```
+SELECT col_1, col_2 FROM table_name WHERE condition_1 AND condition_2 AND condition_3;
+```
+Example
+```
+SELECT * FROM Customers WHERE Country='Germany' AND (City='Berlin' OR City='Munchen');
+```
