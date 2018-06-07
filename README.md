@@ -89,4 +89,14 @@ WHERE ContactName LIKE 'a%o'    Finds any values that start with "a" and ends wi
 
 ---
 
+_IN_ can be used as a shorthand from multiple OR conditions.
+```
+SELECT col_name
+FROM table
+WHERE col_name IN (val_1, val_2);
+```
+Similar _NOT IN_.
+
+---
+
 
