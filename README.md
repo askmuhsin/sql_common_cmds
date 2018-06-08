@@ -3,6 +3,8 @@
 #### MySQL startup   -->	`mysql -u root -p`
 #### Interview questions -->	[link](https://www.toptal.com/sql/interview-questions)
 #### Useful Cheatsheet	-->	[link](https://github.com/treehouse/cheatsheets)
+---
+
 #### Create & Delete db
 Check available dbs
 ```
@@ -24,6 +26,9 @@ See overview of the tables
 ```
 SHOW tables;
 ```
+
+---
+
 #### db queries
 _Comments_ in SQL (-- / /\*...\*/)
 ```
@@ -155,7 +160,7 @@ Here are the different types of the JOINs in SQL:
 * RIGHT (OUTER) JOIN: Return all records from the right table, and the matched records from the left table
 * FULL (OUTER) JOIN: Return all records when there is a match in either left or right table
 
-![img_visual]()
+![img_visual](https://github.com/askmuhsin/sql_common_cmds/blob/master/resources/sql_join.png)
 
 ---
 
