@@ -252,3 +252,129 @@ FROM Products
 ```
 
 ---
+
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+```
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+);
+```
+
+---
+
+The following **constraints** are commonly used in SQL:
+
+* NOT NULL - Ensures that a column cannot have a NULL value
+* UNIQUE - Ensures that all values in a column are different
+* PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+* FOREIGN KEY - Uniquely identifies a row/record in another table
+* CHECK - Ensures that all values in a column satisfies a specific condition
+* DEFAULT - Sets a default value for a column when no value is specified
+* INDEX - Used to create and retrieve data from the database very quickly
+
+---
+
+_NULL_, _NOT NULL_
+
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255) NOT NULL,
+    Age int
+);
+
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    UNIQUE (ID)
+);
+```
+
+---
+
+_DEFAULT_
+The DEFAULT constraint is used to provide a default value for a column.
+
+```
+CREATE TABLE Persons (
+    ID int NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    City varchar(255) DEFAULT 'Sandnes'
+);
+```
+
+---
+
+Constraints can be specified when the table is created with the CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+
+```
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
+);
+
+CREATE TABLE Orders (
+    OrderID int NOT NULL,
+    OrderNumber int NOT NULL,
+    PersonID int,
+    PRIMARY KEY (OrderID),
+    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
+    REFERENCES Persons(PersonID)
+);
+```
+
+---
+
+The _CREATE INDEX_ statement is used to create indexes in tables. Creates an index on a table. Duplicate values are allowed:
+
+```
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+CREATE UNIQUE INDEX Syntax
+Creates a unique index on a table. Duplicate values are not allowed:
+
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...);
+
+CREATE TABLE Persons (
+    ID int NOT NULL AUTO_INCREMENT,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    Age int,
+    PRIMARY KEY (ID)
+);
+```
+
+---
+
+MySQL comes with the following **data types** for storing a date or a date/time value in the database:
+
+* DATE - format YYYY-MM-DD
+* DATETIME - format: YYYY-MM-DD HH:MI:SS
+* TIMESTAMP - format: YYYY-MM-DD HH:MI:SS
+* YEAR - format YYYY or YY
+
+---
+
+SQL Injection
+
+* SQL injection is a code injection technique that might destroy your database.
+* SQL injection is one of the most common web hacking techniques.
+* SQL injection is the placement of malicious code in SQL statements, via web page input.
+
+
+---
+
+##### MySQL REFERENCES --> [link](https://www.w3schools.com/sql/sql_ref_mysql.asp)
